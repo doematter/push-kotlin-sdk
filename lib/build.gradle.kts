@@ -12,6 +12,8 @@ plugins {
 
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
+
+    `maven-publish`
 }
 
 repositories {
@@ -34,11 +36,18 @@ dependencies {
     implementation("org.pgpainless:pgpainless-core:1.5.4")
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
     implementation("com.google.code.gson:gson:2.8.8")
+}
 
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            groupId = "org.eljabali.sami.example"
+            artifactId = "example"
+            version = "0.1"
 
-    // implementation("moe.tlaster:kotlinpgp:1.0.20")
-
-
+            from(components["java"])
+        }
+    }
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
