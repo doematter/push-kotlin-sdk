@@ -101,8 +101,6 @@ Ow0PNfWBEIXKzpU+pdxSjyFbgg9NGOczMtYUTkheIQeBerPjFWsoCEtHMcE=
 
 val ENC_MESSAGE = "-----BEGIN PGP MESSAGE-----\n\nwcBMA4PKczkV0ei6AQf/Q8OQn+z73MzfbdJvZhKVsQsNT4Y7sOQ53D/OzMt6\nclt+u3a3lpCqU5Wsn9xdlATabuay4jsJSVTrtX84o8erlYV3oP7qsq3Xi4gV\nQItRrfYPJmBRhYnEp0kN5lv6xj7xUop+w1Lyu1TpxKE1ZGxtACzy/RfPjcO+\n15R8DyGMI+zLqkk/WUzrDNeznawpclUgKlB5ituWxazzP2OztlV7r7MJU/Pa\n9FIN4Uox3R04KB8a9I/lTg/azpdJvpkAgLHdNlQVH8PDR1jAcsoOrUigGkjV\nKCeqSLlUztvTdkaBSMqKq2HefZFqpEYQ89byJChkNv4mz9adoc1D72zg/Vte\nLMHATAPUpyz46P7nfwEIAI06GOc565p6EJsB/Qp8v3MGlQZvcIj/8UC5klC3\nvNfZDX0BQP3r7DcWAZ3zRIRwJoE1TtPrEMqFIjyDOsGr+FOziMYOpCPLeNId\n/UXqPx9NAOhvsh2YQd8fORwgkUaZbvwrqscMSLeOnenfwkfItUzEdIyM1FLJ\nF3XR8Y/y2ahPgNb83Se+Q+R+zVZ/dHZXeqayqChogzuI1RG0XuvjXhwosKv7\nWDpLm5meW9jwbuOfEgxxXljBJkXVq2L+HJKSo1UWo6zCW2dSnIIntqNJiWQr\nB+ZEugfdTZQb59zaVC3DRHq5m5RUKyYNtdE9YP/HYQXMSnLg5U0COTR7Vk3r\naTXSQAHtWxIrxn3t8o6d9QRetYcUbPOgNsDtRQzyQe7ovgj607WQIvhJlGQi\nmkI6ZkQBadGkwFBRMXHRb3VTZ6iAJ60=\n=ASWS\n-----END PGP MESSAGE-----\n"
 
-
-
 class PgpTest {
   @Test fun pgpDecryptionTests() {
     val aes_secret = Pgp.decrypt(ENC_MESSAGE, PGP_PK)
