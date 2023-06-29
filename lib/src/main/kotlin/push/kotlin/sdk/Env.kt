@@ -17,6 +17,19 @@ object PushURI {
         return "${getBaseUri(env)}/chat/users/$did/chats?page=$page&limit=$limit"
     }
 
+    fun getChatRequests(env:ENV, did:String, page:Number=1, limit:Number=10):String{
+        return "${getBaseUri(env)}/chat/users/$did/requests?page=$page&limit=$limit"
+    }
+
+    fun getConversationHaash(env:ENV, account:String, converationId:String):String{
+        return "${getBaseUri(env)}/chat/users/$account/conversations/$converationId/hash"
+    }
+
+    fun getConversationHashReslove(env: ENV,threadHash:String, limit: Number):String{
+        return  "${getBaseUri(env)}/chat/conversationhash/$threadHash?fetchLimit=${limit}"
+    }
+
+
     fun getBaseUri(env: ENV, version:String="v1"):String {
 
         var baseURL = when (env) {
